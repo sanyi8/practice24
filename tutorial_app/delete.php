@@ -1,10 +1,8 @@
 <!--require database file-->
-<?php include('dbcon.php'); ?>
+<?php include('dbcon.php');
 
 
-<!-- DELETE create id and pull from the right data-->
-
-<?php 
+// DELETE create id and pull from the right data
 
     if(isset($_GET['id'])){
         $id = $_GET['id'];
@@ -13,16 +11,15 @@
 
     $result = mysqli_query($connection, $query);
     // if query fail
-    if(!$result){
-echo "HELLO";
-        // error
-        die("query failed".mysqli_error());
-    }
+        if(!$result){
+            // error
+            die("query failed".mysqli_error());
+        }
 
-    else{
+        else{
 
-        // otherwise go to index.php and message
-        header('location:index.php?delete_msg=You deleted the record');
+            // otherwise go to index.php and message
+            header('location:index.php?delete_msg=You deleted the record');
+        }
     }
-}
 ?>
