@@ -78,7 +78,6 @@
     echo "<h6>".$_GET['message']."</h6>";
   }
 ?>
-
 <!-- SECOND VALIDATION FOR insert.php SECOND  isset -->
 
 <?php
@@ -86,10 +85,16 @@
     echo "<h6>".$_GET['insert_msg']."</h6>";
   }
 ?>
-<!-- SECOND THIRD -->
+<!-- THIRD UPDATE_MSG will be displayed here-->
 <?php
   if(isset($_GET['update_msg'])) {
     echo "<h6>".$_GET['update_msg']."</h6>";
+  }
+?>
+<!-- FORTH DELETE_MSG will be displayed here-->
+<?php
+  if(isset($_GET['delete_msg'])) {
+    echo "<h6>".$_GET['delete_msg']."</h6>";
   }
 ?>
 
